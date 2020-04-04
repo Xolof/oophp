@@ -1,3 +1,3 @@
-#### Footer col 1
+#### Om sidan
 
-Med brödtext i ett stycke som säger något trevligt om just detta block, eller kanske en lista av länkar.
+Detta är en webbplats som skapats för kursen [oophp](https://dbwebb.se/kurser/oophp-v5) som handlar om objektorienterad programmering med ramverk i PHP.
