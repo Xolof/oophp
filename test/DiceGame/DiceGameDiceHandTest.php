@@ -3,6 +3,7 @@
 namespace Anax;
 
 use PHPUnit\Framework\TestCase;
+use \Olj\DiceGame\DiceHand;
 
 /**
  * Test cases for class Guess.
@@ -15,7 +16,7 @@ class DiceGameDiceHandTest extends TestCase
      */
     public function testCreateDiceHand()
     {
-        $hand = new \Olj\DiceGame\DiceHand(4);
+        $hand = new DiceHand(4);
         $this->assertInstanceOf("\Olj\DiceGame\DiceHand", $hand);
     }
 
@@ -24,7 +25,7 @@ class DiceGameDiceHandTest extends TestCase
      */
     public function testCalcAverage()
     {
-        $hand = new \Olj\DiceGame\DiceHand(4);
+        $hand = new DiceHand(4);
         $hand->throwDice();
         $expResults = $hand->getResults();
         $exp = round(array_sum($expResults) / count($expResults), 1);
@@ -38,7 +39,7 @@ class DiceGameDiceHandTest extends TestCase
      */
     public function testCalcSum()
     {
-        $hand = new \Olj\DiceGame\DiceHand(4);
+        $hand = new DiceHand(4);
         $hand->throwDice();
         $expResults = $hand->getResults();
         $exp = array_sum($expResults);

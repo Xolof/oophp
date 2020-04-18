@@ -3,6 +3,8 @@
 namespace Anax;
 
 use PHPUnit\Framework\TestCase;
+use \Olj\Guess\GuessException;
+use \Olj\Guess\Guess;
 
 /**
  * Test cases for class Guess.
@@ -15,9 +17,9 @@ class GuessExceptionTest extends TestCase
      */
     public function testMakeGuessNegative()
     {
-        $this->expectException(\Olj\Guess\GuessException::class);
+        $this->expectException(GuessException::class);
 
-        $guess = new \Olj\Guess\Guess();
+        $guess = new Guess();
         $guess->makeGuess(-1);
     }
 }

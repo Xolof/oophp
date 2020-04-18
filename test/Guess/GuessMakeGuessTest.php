@@ -3,6 +3,7 @@
 namespace Anax;
 
 use PHPUnit\Framework\TestCase;
+use \Olj\Guess\Guess;
 
 /**
  * Test cases for class Guess.
@@ -15,7 +16,7 @@ class GuessMakeGuessTest extends TestCase
      */
     public function testMakeGuessTooLow()
     {
-        $guess = new \Olj\Guess\Guess(50);
+        $guess = new Guess(50);
         $res = $guess->makeGuess(49);
         $exp = "Too low";
         $this->assertEquals($exp, $res);
@@ -27,7 +28,7 @@ class GuessMakeGuessTest extends TestCase
      */
     public function testMakeGuessTooHigh()
     {
-        $guess = new \Olj\Guess\Guess(50);
+        $guess = new Guess(50);
         $res = $guess->makeGuess(51);
         $exp = "Too high";
         $this->assertEquals($exp, $res);
@@ -39,7 +40,7 @@ class GuessMakeGuessTest extends TestCase
      */
     public function testMakeGuessCorrect()
     {
-        $guess = new \Olj\Guess\Guess(50);
+        $guess = new Guess(50);
         $res = $guess->makeGuess(50);
         $exp = "Correct";
         $this->assertEquals($exp, $res);
@@ -51,7 +52,7 @@ class GuessMakeGuessTest extends TestCase
      */
     public function testExhaustGuesses()
     {
-        $guess = new \Olj\Guess\Guess(42);
+        $guess = new Guess(42);
 
         $tries = $guess->tries();
 

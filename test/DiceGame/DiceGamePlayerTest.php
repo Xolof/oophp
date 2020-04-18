@@ -3,6 +3,7 @@
 namespace Anax;
 
 use PHPUnit\Framework\TestCase;
+use \Olj\DiceGame\Player;
 
 /**
  * Test cases for class Guess.
@@ -15,7 +16,7 @@ class DiceGamePlayerTest extends TestCase
      */
     public function testCreatePlayer()
     {
-        $player = new \Olj\DiceGame\Player("Kjell");
+        $player = new Player("Kjell");
         $this->assertInstanceOf("\Olj\DiceGame\Player", $player);
     }
 
@@ -25,7 +26,7 @@ class DiceGamePlayerTest extends TestCase
      */
     public function testMakeRoll()
     {
-        $player = new \Olj\DiceGame\Player("Ros-Marie");
+        $player = new Player("Ros-Marie");
         $player->makeRoll();
         $res = $player->getCurrentResult();
 
@@ -37,7 +38,7 @@ class DiceGamePlayerTest extends TestCase
      */
     public function testGetSetTotal()
     {
-        $player = new \Olj\DiceGame\Player("Ros-Marie");
+        $player = new Player("Ros-Marie");
         $player->setTotal(42);
         $res = $player->getTotal();
         $exp = 42;
@@ -51,7 +52,7 @@ class DiceGamePlayerTest extends TestCase
      */
     public function testSetGetAccInt()
     {
-        $player = new \Olj\DiceGame\Player("Ros-Marie");
+        $player = new Player("Ros-Marie");
         $player->setAccArr([[2, 3], [4, 5], [3, 2]]);
         $res = $player->getAccInt();
         $exp = 19;
@@ -65,7 +66,7 @@ class DiceGamePlayerTest extends TestCase
      */
     public function testSetGetAccArr()
     {
-        $player = new \Olj\DiceGame\Player("Bertil");
+        $player = new Player("Bertil");
         $player->setAccArr([[2, 6], [4, 5], [3, 4]]);
         $res = $player->getAccArr();
         $exp = [[2, 6], [4, 5], [3, 4]];

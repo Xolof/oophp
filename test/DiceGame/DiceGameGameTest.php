@@ -3,6 +3,8 @@
 namespace Anax;
 
 use PHPUnit\Framework\TestCase;
+use \Olj\DiceGame\Game;
+use \Olj\DiceGame\Player;
 
 /**
  * Test cases for class Guess.
@@ -15,7 +17,7 @@ class DiceGameGameTest extends TestCase
      */
     public function testCreateObject()
     {
-        $game = new \Olj\DiceGame\Game();
+        $game = new Game();
         $this->assertInstanceOf("\Olj\DiceGame\Game", $game);
     }
 
@@ -26,8 +28,8 @@ class DiceGameGameTest extends TestCase
      */
     public function testAssignPlayer()
     {
-        $game = new \Olj\DiceGame\Game();
-        $player = new \Olj\DiceGame\Player("Gordon");
+        $game = new Game();
+        $player = new Player("Gordon");
 
         $game->setCurrentPlayer($player);
 
@@ -42,8 +44,8 @@ class DiceGameGameTest extends TestCase
      */
     public function testCheckIfOne()
     {
-        $game = new \Olj\DiceGame\Game();
-        $player = new \Olj\DiceGame\Player("Barney");
+        $game = new Game();
+        $player = new Player("Barney");
 
         $player->currentResult = [4, 1];
 
@@ -62,8 +64,8 @@ class DiceGameGameTest extends TestCase
      */
     public function testCheckIfNotOne()
     {
-        $game = new \Olj\DiceGame\Game();
-        $player = new \Olj\DiceGame\Player("Gina");
+        $game = new Game();
+        $player = new Player("Gina");
 
         $player->currentResult = [5, 3];
 
@@ -82,8 +84,8 @@ class DiceGameGameTest extends TestCase
      */
     public function testGetCurrentPlayerName()
     {
-        $game = new \Olj\DiceGame\Game();
-        $player = new \Olj\DiceGame\Player("G-man");
+        $game = new Game();
+        $player = new Player("G-man");
         $game->setCurrentPlayer($player);
 
         $res = $game->getCurrentPlayerName();
@@ -98,7 +100,7 @@ class DiceGameGameTest extends TestCase
     public function testDecideBeginner()
     {
         for ($i = 0; $i < 10; $i++) {
-            $game = new \Olj\DiceGame\Game();
+            $game = new Game();
             $game->decideBeginner();
     
             $res = $game->getCurrentPlayerName();

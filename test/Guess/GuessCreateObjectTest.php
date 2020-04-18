@@ -3,6 +3,7 @@
 namespace Anax;
 
 use PHPUnit\Framework\TestCase;
+use \Olj\Guess\Guess;
 
 /**
  * Test cases for class Guess.
@@ -15,7 +16,7 @@ class GuessCreateObjectTest extends TestCase
      */
     public function testCreateObjectNoArguments()
     {
-        $guess = new \Olj\Guess\Guess();
+        $guess = new Guess();
         $this->assertInstanceOf("\Olj\Guess\Guess", $guess);
 
         $res = $guess->tries();
@@ -31,7 +32,7 @@ class GuessCreateObjectTest extends TestCase
      */
     public function testCreateObjectFirstArgument()
     {
-        $guess = new \Olj\Guess\Guess(42);
+        $guess = new Guess(42);
         $this->assertInstanceOf("\Olj\Guess\Guess", $guess);
 
         $res = $guess->tries();
@@ -51,7 +52,7 @@ class GuessCreateObjectTest extends TestCase
      */
     public function testCreateObjectBothArguments()
     {
-        $guess = new \Olj\Guess\Guess(42, 7);
+        $guess = new Guess(42, 7);
         $this->assertInstanceOf("\Olj\Guess\Guess", $guess);
 
         $res = $guess->tries();
