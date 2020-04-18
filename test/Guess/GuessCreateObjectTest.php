@@ -1,0 +1,65 @@
+<?php
+
+namespace Anax;
+
+use PHPUnit\Framework\TestCase;
+
+/**
+ * Test cases for class Guess.
+ */
+class GuessCreateObjectTest extends TestCase
+{
+    /**
+     * Construct object and verify that the object has the expected
+     * properties. Use no arguments.
+     */
+    public function testCreateObjectNoArguments()
+    {
+        $guess = new \Olj\Guess\Guess();
+        $this->assertInstanceOf("\Olj\Guess\Guess", $guess);
+
+        $res = $guess->tries();
+        $exp = 6;
+        $this->assertEquals($exp, $res);
+    }
+
+
+
+    /**
+     * Construct object and verify that the object has the expected
+     * properties. Use only first argument.
+     */
+    public function testCreateObjectFirstArgument()
+    {
+        $guess = new \Olj\Guess\Guess(42);
+        $this->assertInstanceOf("\Olj\Guess\Guess", $guess);
+
+        $res = $guess->tries();
+        $exp = 6;
+        $this->assertEquals($exp, $res);
+
+        $res = $guess->number();
+        $exp = 42;
+        $this->assertEquals($exp, $res);
+    }
+
+
+
+    /**
+     * Construct object and verify that the object has the expected
+     * properties. Use both arguments.
+     */
+    public function testCreateObjectBothArguments()
+    {
+        $guess = new \Olj\Guess\Guess(42, 7);
+        $this->assertInstanceOf("\Olj\Guess\Guess", $guess);
+
+        $res = $guess->tries();
+        $exp = 7;
+        $this->assertEquals($exp, $res);
+
+        $res = $guess->number();
+        $exp = 42;
+        $this->assertEquals($exp, $res);
+    }
+}

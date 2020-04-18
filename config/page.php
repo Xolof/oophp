@@ -20,7 +20,7 @@ return [
             "lang" => "sv",
             "stylesheets" => [
                 // Change here to set another default stylesheet
-                "css/biohazard.min.css",
+                "css/new.min.css",
                 //"css/another.min.css",
             ],
             "javascripts" => [

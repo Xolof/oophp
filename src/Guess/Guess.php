@@ -91,14 +91,20 @@ class Guess
      */
     public function makeGuess($number)
     {
-        if ($number < 1 || $number > 100) {
-            throw new GuessException("The guess must be a number from 1 to 100.\n");
-        } else if ($number == $this->number) {
-            return "Correct";
-        } else if ($number > $this->number) {
-            return "Too high";
-        } else {
-            return "Too low";
+        $this->decrementTries();
+
+        if ($this->tries() > 0) {
+            if ($number < 1 || $number > 100) {
+                throw new GuessException("The guess must be a number from 1 to 100.\n");
+            } else if ($number == $this->number) {
+                return "Correct";
+            } else if ($number > $this->number) {
+                return "Too high";
+            } else {
+                return "Too low";
+            }
         }
+
+        return "No guesses left.";
     }
 }
