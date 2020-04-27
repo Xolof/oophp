@@ -331,6 +331,11 @@ class DiceGameController implements AppInjectableInterface
             var_dump($game->getCurrentPlayer()->getCurrentResultInt());
             var_dump($game->getCurrentPlayer()->getAccInt());
 
+            if ($game->checkIfOne()) {
+                $session->set("action", "slog en etta");
+                break;
+            }
+
             // Stop if the current result is over 8 or the accumulated result is over 14.
             if ($game->getCurrentPlayer()->getCurrentResultInt() > 8
                 || $game->getCurrentPlayer()->getAccInt() > 14) {
@@ -348,11 +353,6 @@ class DiceGameController implements AppInjectableInterface
                 }
 
                 $session->set("action", "sparade resultatet");
-                break;
-            }
-    
-            if ($game->checkIfOne()) {
-                $session->set("action", "slog en etta");
                 break;
             }
         }
