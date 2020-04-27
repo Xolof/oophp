@@ -6947,7 +6947,8 @@ input[type="submit"]:hover {
 .dice-game-left {
   width: 30%;
 }
-.dice-game-right {
+.dice-game-right,
+.histogram {
   border-left: 1px solid #ccc;
   width: 70%;
   padding-left: 2rem;

@@ -5,6 +5,7 @@ namespace Anax;
 use PHPUnit\Framework\TestCase;
 use \Olj\DiceGame\Game;
 use \Olj\DiceGame\Player;
+use \Olj\DiceGame\Histogram;
 
 /**
  * Test cases for class Guess.
@@ -109,5 +110,19 @@ class DiceGameGameTest extends TestCase
     
             $this->assertTrue(in_array($res, $allowedNames));
         }
+    }
+
+    /**
+     * Test that a Histogram object ban be injected.
+     */
+    public function testInjectHistogram()
+    {
+        $histogram = new Histogram();
+        $game = new Game();
+
+        $game->injectHistogram($histogram);
+        $res = $game->histogram;
+        $exp = $histogram;
+        $this->assertEquals($exp, $res);
     }
 }

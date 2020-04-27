@@ -59,5 +59,15 @@ return [
             "url" => "dev",
             "title" => "Anax development utilities",
         ],
+        [
+            "text" => "Dice game",
+            "url" => "dice-game",
+            "title" => "Spela Tärningsspelet",
+        ],
+        [
+            "text" => "Dice game 2",
+            "url" => "dice-game-2",
+            "title" => "Spela Tärningsspelet",
+        ]
     ],
 ];

@@ -17,7 +17,7 @@ return [
             "info" => "Just say hi with a string.",
             "path" => "hi",
             "handler" => function () {
-                return "Hi.";
+                return "Hi :)";
             },
         ],
         [

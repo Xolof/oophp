@@ -62,7 +62,7 @@ class Game
      *
      * @return void
      */
-    public function setCurrentPlayer(Player $player)
+    public function setCurrentPlayer($player)
     {
         $this->currentPlayer = $player;
     }
@@ -75,5 +75,13 @@ class Game
     public function getCurrentPlayer()
     {
         return $this->currentPlayer;
+    }
+
+    /**
+     * Inject a histogram object.
+     */
+    public function injectHistogram(HistogramInterface $histogram)
+    {
+        $this->histogram = $histogram;
     }
 }

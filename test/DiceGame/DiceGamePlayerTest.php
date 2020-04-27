@@ -73,4 +73,19 @@ class DiceGamePlayerTest extends TestCase
 
         $this->assertEquals($res, $exp);
     }
+
+    /**
+     * Check that the current result can be retrieved as an integer.
+     */
+    public function testGetCurrentResultInt()
+    {
+        $player = new Player("Gösta");
+        $player->makeRoll();
+
+        $res = $player->getCurrentResultInt();
+
+        var_dump(gettype($res));
+
+        $this->assertTrue(is_int($res));
+    }
 }

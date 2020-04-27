@@ -42,6 +42,17 @@ class Player
     }
 
     /**
+     * Get current results as integer
+     *
+     * @return integer $res Integer value of current result.
+     */
+    public function getCurrentResultInt()
+    {
+        $res = intval(array_sum($this->currentResult));
+        return $res;
+    }
+
+    /**
      * Get total results
      *
      * @return int $res Sum of the total results.
@@ -62,7 +73,9 @@ class Player
      */
     public function setTotal($total)
     {
-        $this->totalResult = $total;
+        if ($total != null) {
+            $this->totalResult = $total;
+        }
     }
 
     /**
@@ -77,7 +90,7 @@ class Player
         foreach ($this->acc as $item) {
             $res += array_sum($item);
         }
-
+        
         return $res;
     }
 
@@ -102,7 +115,9 @@ class Player
      */
     public function setAccArr($accArr)
     {
-        $this->acc = $accArr;
+        if ($accArr != []) {
+            $this->acc = $accArr;
+        }
     }
 
     /**

@@ -12,8 +12,6 @@ Jag heter Olof och är uppväxt i Klippan i nordvästra Skåne.
 
 Just nu befinner jag mig i karantän någonstans i sydöstra Asien.
 
-Som lite terapi anpassade jag stylen för Me-sidan till ett "Biohazard"-tema.
-
 Det blir mycket kodning nu, jag är taggad!
 
 Hälsningar,
