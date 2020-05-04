@@ -6991,6 +6991,7 @@ input[type="submit"]:hover {
 }
 .article_movie p {
   color: #ddd;
+  text-align: center;
 }
 .article_movie form {
   color: #ddd;
@@ -6999,12 +7000,13 @@ input[type="submit"]:hover {
 .article_movie form input[type="search"] {
   display: block;
   margin: 0 auto;
-  width: 16em;
-  text-align: center;
+  width: 16rem;
 }
 .article_movie form input[type="search"],
-.article_movie form input[type="number"] {
-  text-align: center;
+.article_movie form input[type="number"],
+.article_movie form select,
+.article_movie form input[type="text"] {
+  width: 16rem;
   padding: 0.4em;
   border-radius: 4px;
   color: #ddd;
@@ -7012,26 +7014,54 @@ input[type="submit"]:hover {
   border: 1px solid #d4e5ff;
 }
 .article_movie form input[type="search"]:focus,
-.article_movie form input[type="number"]:focus {
+.article_movie form input[type="number"]:focus,
+.article_movie form select:focus,
+.article_movie form input[type="text"]:focus {
   border: 1px solid #c552c5;
   color: #c552c5;
 }
 .article_movie form .year_label_movie {
   width: auto;
 }
-.article_movie .btn_search_movie {
+.article_movie .btn_movie {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 1.4rem;
   background-color: transparent;
-  color: #dfdf19;
   border-radius: 4px;
-  padding: 0.8em 8em;
-  border-color: #dfdf19;
+  padding: 0.8em 0;
+  width: 16rem;
   transition: 0.4s all;
 }
-.article_movie .btn_search_movie:hover {
-  background-color: yellow;
+.article_movie .btn_movie:hover {
   color: #1b1b1b;
+  cursor: pointer;
+}
+.article_movie .btn_edit_movie {
+  color: #dfdf19;
+  border-color: #dfdf19;
+}
+.article_movie .btn_edit_movie:hover {
+  background-color: yellow;
+}
+.article_movie .btn_add_movie,
+.article_movie .btn_search_movie,
+.article_movie .btn_reset_movie {
+  color: #35c861;
+  border-color: #35c861;
+}
+.article_movie .btn_add_movie:hover,
+.article_movie .btn_search_movie:hover,
+.article_movie .btn_reset_movie:hover {
+  background-color: #0fdb4c;
+}
+.article_movie .btn_delete_movie,
+.article_movie .btn_resetdb_movie {
+  color: #ca4141;
+  border-color: #ca4141;
+}
+.article_movie .btn_delete_movie:hover,
+.article_movie .btn_resetdb_movie:hover {
+  background-color: #e71717;
 }
 .article_movie a {
   display: block;
@@ -7046,9 +7076,11 @@ input[type="submit"]:hover {
 }
 .article_movie .warning_movie {
   color: #ddc74c;
+  text-align: center;
 }
 .article_movie .info_movie {
   color: #95dd4c;
+  text-align: center;
 }
 .navbar_movie {
   color: #387fdd;

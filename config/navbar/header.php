@@ -97,6 +97,11 @@ return [
             "text" => "Dice game 2",
             "url" => "dice-game-2",
             "title" => "Spela Tärningsspelet",
+        ],
+        [
+            "text" => "Movies",
+            "url" => "movie/show",
+            "title" => "Movie Database",
         ]
     ],
 ];

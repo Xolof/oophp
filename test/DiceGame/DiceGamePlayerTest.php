@@ -84,8 +84,6 @@ class DiceGamePlayerTest extends TestCase
 
         $res = $player->getCurrentResultInt();
 
-        var_dump(gettype($res));
-
         $this->assertTrue(is_int($res));
     }
 }

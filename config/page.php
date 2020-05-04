@@ -20,7 +20,7 @@ return [
             "lang" => "sv",
             "stylesheets" => [
                 // Change here to set another default stylesheet
-                "css/new.min.css",
+                "css/kmom05.min.css",
                 //"css/another.min.css",
             ],
             "javascripts" => [
