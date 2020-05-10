@@ -63,45 +63,55 @@ return [
             "url" => "om",
             "title" => "Om denna webbplats.",
         ],
+        // [
+        //     "text" => "Styleväljare",
+        //     "url" => "style",
+        //     "title" => "Välj stylesheet.",
+        // ],
+        // [
+        //     "text" => "Docs",
+        //     "url" => "dokumentation",
+        //     "title" => "Dokumentation av ramverk och liknande.",
+        // ],
+        // [
+        //     "text" => "Test &amp; Lek",
+        //     "url" => "lek",
+        //     "title" => "Testa och lek med test- och exempelprogram",
+        // ],
+        // [
+        //     "text" => "Anax dev",
+        //     "url" => "dev",
+        //     "title" => "Anax development utilities",
+        // ],
+        // [
+        //     "text" => "Guess game",
+        //     "url" => "guess-game",
+        //     "title" => "Spela Gissa numret",
+        // ],
+        // [
+        //     "text" => "Dice game",
+        //     "url" => "dice-game",
+        //     "title" => "Spela Tärningsspelet",
+        // ],
+        // [
+        //     "text" => "Dice game 2",
+        //     "url" => "dice-game-2",
+        //     "title" => "Spela Tärningsspelet",
+        // ],
+        // [
+        //     "text" => "Movies",
+        //     "url" => "movie/show",
+        //     "title" => "Movie Database",
+        // ],
+        // [
+        //     "text" => "Filter demo",
+        //     "url" => "filter",
+        //     "title" => "Filter demo",
+        // ],
         [
-            "text" => "Styleväljare",
-            "url" => "style",
-            "title" => "Välj stylesheet.",
-        ],
-        [
-            "text" => "Docs",
-            "url" => "dokumentation",
-            "title" => "Dokumentation av ramverk och liknande.",
-        ],
-        [
-            "text" => "Test &amp; Lek",
-            "url" => "lek",
-            "title" => "Testa och lek med test- och exempelprogram",
-        ],
-        [
-            "text" => "Anax dev",
-            "url" => "dev",
-            "title" => "Anax development utilities",
-        ],
-        [
-            "text" => "Guess game",
-            "url" => "guess-game",
-            "title" => "Spela Gissa numret",
-        ],
-        [
-            "text" => "Dice game",
-            "url" => "dice-game",
-            "title" => "Spela Tärningsspelet",
-        ],
-        [
-            "text" => "Dice game 2",
-            "url" => "dice-game-2",
-            "title" => "Spela Tärningsspelet",
-        ],
-        [
-            "text" => "Movies",
-            "url" => "movie/show",
-            "title" => "Movie Database",
+            "text" => "CMS",
+            "url" => "cms",
+            "title" => "Content Management System",
         ]
     ],
 ];

@@ -489,3 +489,54 @@ input[type="submit"]:hover {
         }
     }
 }
+
+/**
+* Style for header
+*/
+.inner-wrap-header {
+    background-color: #333;
+    color: @colorH3BorderBottom;
+}
+
+.rm-desktop li ul {
+    background-color: #333;
+}
+
+.site-logo-text {
+    text-shadow: none;
+    a {
+        color: @colorH3BorderBottom;
+        &:hover {
+            text-shadow: none;
+            color: @colorH3BorderBottom;
+        }
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .site-logo-text-icon {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    .region-main {
+        margin: 0 0.4rem;
+        width: 100%;
+    }
+}
+
+/**
+* Style for CMS
+*/
+
+.main_myCMS {
+    table {
+        th,
+        td {
+            border: 1px solid #ccc;
+        }
+        border-collapse: collapse;
+    }
+}

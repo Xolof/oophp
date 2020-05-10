@@ -98,6 +98,16 @@ return [
             "text" => "Movies",
             "url" => "movie/show",
             "title" => "Movie Database",
+        ],
+        [
+            "text" => "Filter demo",
+            "url" => "filter",
+            "title" => "Filter demo",
+        ],
+        [
+            "text" => "CMS",
+            "url" => "cms",
+            "title" => "Content Management System",
         ]
     ],
 ];
