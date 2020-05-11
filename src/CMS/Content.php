@@ -1,6 +1,11 @@
 <?php
 namespace Olj\CMS;
 
+/**
+*
+* A class for managing common content operations.
+*
+*/
 class Content
 {
     /**

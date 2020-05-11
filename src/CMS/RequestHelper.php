@@ -16,10 +16,9 @@ class RequestHelper
     /**
      * Get values from POST and return as array.
      *
-     * @param string $key     to look for, or value array
-     * @param mixed  $default value to set if key does not exists
+     * @param string $key   an array with values to get.
      *
-     * @return mixed value from POST
+     * @return array        an associative array with values from POST.
      */
     public function getPostArr($key)
     {
