@@ -106,7 +106,7 @@ return [
         ],
         [
             "text" => "CMS",
-            "url" => "cms",
+            "url" => "cms/landing",
             "title" => "Content Management System",
         ]
     ],

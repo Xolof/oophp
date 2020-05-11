@@ -22,11 +22,21 @@ class MyTextFilter
     ];
 
     /**
+     * Get the allowed filters.
+     * 
+     * @return array with the alowed filters.
+     */
+    public function getFilters()
+    {
+        return $this->filters;
+    }
+
+    /**
      * First, strip tags off thte text.
      * Then, call each filter on the text and return the processed text.
      *
      * @param string $text   The text to filter.
-     * @param array  $filter Array of filters to use.
+     * @param string  $filter Comma separated string with filters to use.
      *
      * @return string with the formatted text.
      */
@@ -37,18 +47,24 @@ class MyTextFilter
         //     throw new Exception("Filters 'markdown' and 'nl2br' are not compatible.");
         // };
 
-        $filter = $this->removeIncompatibleFilters($filter);
-
         // Strip all tags.
-        $newText = $this->strip($text);
+        $text = $this->strip($text);
+
+        if ($filter === null or $filter === "") {
+            return $text;
+        }
+
+        $filter = explode(",", $filter);
+
+        $filter = $this->removeIncompatibleFilters($filter);
 
         // Apply the filters.
         foreach ($filter as $key) {
             $method = $this->filters[$key];
-            $newText = $this->{$method}($newText);
+            $text = $this->{$method}($text);
         };
 
-        return $newText;
+        return $text;
     }
 
     private function removeIncompatibleFilters($filter)

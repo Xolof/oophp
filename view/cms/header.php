@@ -1,14 +1,20 @@
+<?php
+namespace Anax\View;
+
+?>
+
 <header class="site-header">
+    <h1>My CMS</h1>
+
     <navbar class="navbar">
-        <a href="cms">Show all content</a> |
-        <a href="cms/admin">Admin</a> |
-        <a href="cms/create">Create</a> |
-        <a href="cms/pages">Pages</a> |
-        <a href="cms/blog">Blog</a> |
+        <a href="<?= url('cms/landing')?>">Landing</a> |
+        <a href="<?= url('cms/show')?>">Show all content</a> |
+        <a href="<?= url('cms/admin')?>">Admin</a> |
+        <a href="<?= url('cms/create')?>">Create</a> |
+        <a href="<?= url('cms/pages')?>">Pages</a> |
+        <a href="<?= url('cms/blog')?>">Blog</a> |
+        <a href="<?= url('cms/reset')?>">Reset</a> |
     </navbar> 
-
-<h1>My CMS</h1>
-
 </header>
 
 <main class="main_myCMS">

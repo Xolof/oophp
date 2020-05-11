@@ -6,8 +6,8 @@
 /**
  * Set one of Development or Production mode.
  */
-define("ANAX_DEVELOPMENT", true);
-//define("ANAX_PRODUCTION", true);
+define("ANAX_DEVELOPMENT", false);
+define("ANAX_PRODUCTION", true);
 
 
 

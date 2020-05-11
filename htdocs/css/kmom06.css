@@ -7143,6 +7143,11 @@ input[type="submit"]:hover {
 /**
 * Style for header
 */
+.inner-wrap-footer,
+.outer-wrap {
+  margin-left: 0;
+  margin-right: 0;
+}
 .inner-wrap-header {
   background-color: #333;
   color: #eee;

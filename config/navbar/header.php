@@ -103,14 +103,14 @@ return [
         //     "url" => "movie/show",
         //     "title" => "Movie Database",
         // ],
-        // [
-        //     "text" => "Filter demo",
-        //     "url" => "filter",
-        //     "title" => "Filter demo",
-        // ],
+        [
+            "text" => "Filter demo",
+            "url" => "filter",
+            "title" => "Filter demo",
+        ],
         [
             "text" => "CMS",
-            "url" => "cms",
+            "url" => "cms/landing",
             "title" => "Content Management System",
         ]
     ],

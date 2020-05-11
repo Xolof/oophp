@@ -6,25 +6,18 @@ if (!$res) {
 }
 ?>
 
-<table>
-    <tr class="first">
-        <th>Id</th>
-        <th>Title</th>
-        <th>Type</th>
-        <th>Published</th>
-        <th>Created</th>
-        <th>Updated</th>
-        <th>Deleted</th>
-    </tr>
 <?php foreach ($res as $row) : ?>
-    <tr>
-        <td><?= e($row->id) ?></td>
-        <td><?= e($row->title) ?></td>
-        <td><?= e($row->type) ?></td>
-        <td><?= e($row->published) ?></td>
-        <td><?= e($row->created) ?></td>
-        <td><?= e($row->updated) ?></td>
-        <td><?= e($row->deleted) ?></td>
-    </tr>
+    <section class="cms_content_item">
+        <p><b>Id:</b> <?= e($row->id) ?></p>
+        <p><b>Title:</b> <?= e($row->title) ?></p>
+        <p><b>Type:</b> <?= e($row->type) ?></p>
+        <p><b>Published:</b> <?= e($row->published) ?></p>
+        <p><b>Created:</b> <?= e($row->created) ?></p>
+        <p><b>Updated:</b> <?= e($row->updated) ?></p>
+        <p><b>Deleted:</b> <?= e($row->deleted) ?></p>
+        <p><b>Path:</b> <?= e($row->path) ?></p>
+        <p><b>Slug:</b> <?= e($row->slug) ?></p>
+    </section>
+
+
 <?php endforeach; ?>
-</table>

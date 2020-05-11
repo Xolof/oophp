@@ -104,7 +104,7 @@ I implementationen i CMS:et kan det vara trevligt att ge användaren ett meddela
 EOD;
 
         try {
-            $html = $filter->parse($text, ["markdown", "nl2br", "bbcode", "link"]);
+            $html = $filter->parse($text, "markdown,nl2br,bbcode,link");
         } catch (Exception $e) {
             echo $e->getMessage();
         }
@@ -142,7 +142,7 @@ old pond\nfrog leaps in\nwater's sound
 EOD;
 
         try {
-            $html = $filter->parse($text, ["link", "nl2br"]);
+            $html = $filter->parse($text, "link,nl2br");
         } catch (Exception $e) {
             echo $e->getMessage();
         }

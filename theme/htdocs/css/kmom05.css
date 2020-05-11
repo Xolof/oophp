@@ -7176,8 +7176,51 @@ input[type="submit"]:hover {
 */
 .main_myCMS table {
   border-collapse: collapse;
+  margin-bottom: 1.4em;
+}
+.main_myCMS table th {
+  background-color: #a5a5a5;
 }
 .main_myCMS table th,
 .main_myCMS table td {
   border: 1px solid #ccc;
+  padding: 0.2em 0.4em;
+}
+.main_myCMS table .actionsTd .delete-cross {
+  margin-left: 1em;
+  background-color: #74397c;
+  color: #e4e4e4;
+  text-decoration: none;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+}
+.main_myCMS table .actionsTd .delete-cross:hover {
+  background-color: #ff0000;
+}
+.main_myCMS .article_landing {
+  display: flex;
+}
+.main_myCMS .landing_section {
+  width: 50%;
+}
+.main_myCMS .landing_section nav a {
+  display: block;
+}
+.site-header {
+  margin-bottom: 1.4em;
+}
+html {
+  overflow-x: hidden;
+}
+.cms_footer {
+  margin-top: 1.4em;
+  border-top: 1px solid #333;
+}
+.cms_content_item {
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 1.4em;
 }
