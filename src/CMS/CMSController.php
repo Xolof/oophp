@@ -235,6 +235,11 @@ EOD;
         $request = $this->app->request;
         $content = new Content($request, $this->app->db);
 
+        if ($request->getPost("delete")) {
+            $id = $request->getPost("contentId");
+            return $this->app->response->redirect("cms/delete?id=" . $id);
+        }
+
         if ($request->getPost("doSave")) {
             $content->save();
 
